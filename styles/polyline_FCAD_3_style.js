@@ -23,6 +23,7 @@ var style_polyline_FCAD_3 = function(feature, resolution){
     with
 		if (feature.get("Length") !== null) {
         labelText = String(feature.get("Length"));
+	   } 
     var style = [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(231,113,72,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
