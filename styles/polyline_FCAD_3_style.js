@@ -17,8 +17,14 @@ var style_polyline_FCAD_3 = function(feature, resolution){
     var offsetX = 8;
     var offsetY = 3;
     var placement = 'line';
-   if (feature.get("Length") !== null) {
-        labelText = String(feature.get("Length"));
+  if (feature.get("format_number(\"Length\",2)|| ' Mt'") !== null) {
+        labelText = String(feature.get("format_number(\"Length\",2)|| ' Mt'"));
+		}
+		with
+		if (feature.get("Length") !== null) {
+        labelText = String(feature.get("Length"));	
+		
+		
     }
 	
 }
