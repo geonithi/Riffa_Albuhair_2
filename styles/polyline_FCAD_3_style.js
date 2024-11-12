@@ -19,12 +19,11 @@ var style_polyline_FCAD_3 = function(feature, resolution){
     var placement = 'line';
  var lengthValue = feature.get("Length"); // Access the "Length" attribute directly
 
-if (lengthValue !== null && lengthValue !== undefined) {
-    // Assuming 'format_number' is a function you have for formatting numbers
-    labelText = format_number(lengthValue, 2) + ' Mt';
-} else {
-    labelText = "No Length Data"; // Optional: Provide fallback text
-}
+if (feature.get("Length") !== null) {
+        labelText = String(feature.get("Length"));
+		 
+		
+    }
 	
 }
 	 
