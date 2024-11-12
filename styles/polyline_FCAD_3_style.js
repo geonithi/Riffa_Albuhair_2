@@ -19,6 +19,8 @@ var style_polyline_FCAD_3 = function(feature, resolution){
     var placement = 'line';
     if (feature.get("format_number(\"Length\",2)|| ' Mt'") !== null) {
         labelText = String(feature.get("format_number(\"Length\",2)|| ' Mt'"));
+        labelText = feature.get("Length") ? feature.get("Length").toFixed(2) + " Mt" : "";
+
     }   
     var style = [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(231,113,72,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
