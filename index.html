@@ -1,5 +1,25 @@
 <!doctype html>
 <html lang="en">
+    <!DOCTYPE html>
+<html>
+
+    <title>Password Protected Page</title>
+    <script type="text/javascript">
+        function checkPassword() {
+            var password = prompt("Enter the password:");
+            if (password != "password123") {
+                alert("Incorrect password!");
+                window.location.href = "index.html"; // Redirect to the homepage if incorrect password
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <h1>Welcome to the protected page!</h1>
+    <p>This page is password-protected using JavaScript.</p>
+</body>
+</html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
