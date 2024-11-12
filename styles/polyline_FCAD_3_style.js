@@ -17,10 +17,10 @@ var style_polyline_FCAD_3 = function(feature, resolution){
     var offsetX = 8;
     var offsetY = 3;
     var placement = 'line';
-   	if (feature.get("Length") !== null) {
-    // Assuming format_number is called here for formatting
-    var formattedLength = format_number(feature.get("Length"), 2) + ' Mt';
-    labelText = String(formattedLength);
+   if (feature.get("Length") !== null) {
+        labelText = String(feature.get("Length"));
+    }
+	
 }
 	 
     var style = [ new ol.style.Style({
